@@ -1,0 +1,35 @@
+{% extends 'base.html'%}
+{% load static %}
+
+
+{% block content %}
+<div class="col-md-8" style="margin: auto">
+    <div class="card">
+        <div class="card-header" style="color: red; font-weight: bolder">
+            Product Details
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> Name: {{inventory.name}}</h5>
+                        <p class="card-text"> <strong>Description:</strong> {{inventory.description}}</p>
+                        <p class="card-text"><strong>Note:</strong> {{inventory.note}}</p>
+                        <p class="card-text"><strong>Stock:</strong> {{inventory.stock}}</p>
+                        <p class="card-text"><strong>Availability:</strong> {% if inventory.availability == True and inventory.stock > 0 %}
+                            Available
+                            {% else %}
+                            Not Available{% endif %} 
+                        </div> 
+                    </div> 
+                </div> 
+            <div class="col-sm-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img src="{% static "img/no_image.png" %}"
+                                            style="height: 210px; width: 210px;" />
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+                {% endblock content %}
