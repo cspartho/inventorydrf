@@ -38,4 +38,7 @@ Finally, run the development server:
 ```bash
 python manage.py runserver
 ```
-The project will be available at **127.0.0.1:8000**.
+The project will be available at **127.0.0.1:8000/**.
+
+To get inventory list **http://127.0.0.1:8000/inventory/**
+To get inventory list api **http://127.0.0.1:8000/api/inventory/**
