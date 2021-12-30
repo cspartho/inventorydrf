@@ -29,9 +29,6 @@ jobs:
 
     - name: Collect static
       run: pipenv run python manage.py collectstatic
-
-    - name: Run tests
-      run: pipenv run python manage.py test
     
     - name: Upload artifact for deployment jobs
       uses: actions/upload-artifact@v2
