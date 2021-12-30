@@ -21,11 +21,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install pipenv
         pipenv install --deploy --dev
-    - name: Activate Virtual Enviornment
-      run: pipenv shell
         
     - name: Collect static
-      run: python manage.py collectstatic
+      run: pipenv run python manage.py collectstatic
 
     - name: Run tests
-      run: python manage.py test
+      run: pipenv run python manage.py test
