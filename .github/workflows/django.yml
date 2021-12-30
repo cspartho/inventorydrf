@@ -44,11 +44,6 @@ jobs:
         with:
           name: python-app
           path: .
-      
-      - name: Log in to Azure CLI
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_SERVICE_PRINCIPAL }}
     
       - name: Disable static collection and set migration command on App Service
         uses: Azure/appservice-settings@v1
